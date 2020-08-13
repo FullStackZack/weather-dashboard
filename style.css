@@ -1,0 +1,21 @@
+nav {
+    background-color: rgb(53, 52, 52);
+    color: white;
+    height: 75px;
+}
+
+nav h1 {
+    margin-top: 10px;
+}
+
+aside {
+    margin: 15px;
+}
+
+main {
+    margin: 15px;
+}
+
+.jumbotron {
+    margin: 30px;
+}
