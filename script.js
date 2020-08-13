@@ -3,8 +3,9 @@ $("#searchBtn").on("click", function(event) {
 
     var city = $("#find-city").val();
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={47413c02a6c4649e32aaf9c1d6864bf6}";
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=40bb3520956324a1bb57bdbfcf243b0f";
 
+    console.log(queryURL);
 
     $.ajax({
         url: queryURL,
@@ -12,7 +13,6 @@ $("#searchBtn").on("click", function(event) {
     }).then(function(response) {
         $("#current-weather").text(JSON.stringify(response));
 
-        console.log(response);
     });
 
 })
