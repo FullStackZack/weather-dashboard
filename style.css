@@ -9,7 +9,8 @@ nav h1 {
 }
 
 aside {
-    margin: 15px;
+    margin-top: 30px;
+    margin-left: 15px;
 }
 
 main {
@@ -19,4 +20,8 @@ main {
 .jumbotron {
     margin-top: 30px;
     margin-bottom: 15px;
+}
+
+#jumbo-2 {
+    margin-top: 30px;
 }
