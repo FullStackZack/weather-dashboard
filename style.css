@@ -17,7 +17,11 @@ main {
     margin: 15px;
 }
 
-.jumbotron {
-    margin-top: 30px;
-    margin-bottom: 15px;
+#city-buttons {
+    text-align: center;
+}
+
+#current-weather {
+    margin-left: 100px;
+    margin-top: 25px;
 }
