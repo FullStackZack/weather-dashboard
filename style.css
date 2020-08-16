@@ -22,6 +22,9 @@ main {
 }
 
 #current-weather {
-    margin-left: 100px;
     margin-top: 25px;
+}
+
+#five-day-forecast {
+    visibility: hidden;
 }

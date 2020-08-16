@@ -91,6 +91,8 @@ function displayCityWeather() {
             }
               
         }
+
+        $("#five-day-forecast").css("visibility", "visible");
     })
 }
 
@@ -122,7 +124,6 @@ $("#searchBtn").on("click", function(event) {
     addButtons();
 
     displayCityWeather();
-
 
 });
 
