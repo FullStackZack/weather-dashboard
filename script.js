@@ -61,13 +61,14 @@ function displayCityWeather() {
         method: "GET"
     }).then(function(response) {
         console.log(response)
+        $("#fiveDay").empty();
 
         var fiveDay = response.list;
         var row = $("<div class='row'>")
         for (var i = 0; i < fiveDay.length; i++) {
             
             if (fiveDay[i].dt_txt.includes("00:00:00")) {
-                var col = $("<div class='col-sm-2'>")
+             var col = $("<div class='col-sm-2'>")
              var card = $("<div class='card'>")
              var cardBody = $("<div class='card-body'>")
              var date = moment(fiveDay[i].dt, "X").format(" (MM/DD/YYYY) ")
@@ -99,7 +100,7 @@ function addButtons() {
 
     for (var i = 0; i < cities.length; i++) {
 
-        var cityBtn = $("<button>");
+        var cityBtn = $("<button type='button' class='btn btn-primary'>");
 
         cityBtn.addClass("city-btn");
 
