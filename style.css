@@ -17,8 +17,9 @@ main {
     margin: 15px;
 }
 
-#city-buttons {
-    text-align: center;
+button {
+    padding: 10px;
+    margin: 5px;
 }
 
 #current-weather {

@@ -102,7 +102,7 @@ function addButtons() {
 
     for (var i = 0; i < cities.length; i++) {
 
-        var cityBtn = $("<button type='button' class='btn btn-primary'>");
+        var cityBtn = $("<button type='button' class='btn btn-secondary'>");
 
         cityBtn.addClass("city-btn");
 
@@ -111,6 +111,8 @@ function addButtons() {
         cityBtn.text(cities[i]);
 
         $("#city-buttons").append(cityBtn);
+
+        localStorage.setItem(cities, JSON.stringify(cityBtn))
     }
 }
 
@@ -130,4 +132,3 @@ $("#searchBtn").on("click", function(event) {
 $(document).on("click", ".city-btn", displayCityWeather);
 
 addButtons();
-    
