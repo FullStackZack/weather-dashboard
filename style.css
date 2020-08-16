@@ -24,8 +24,33 @@ button {
 
 #current-weather {
     margin-top: 25px;
+    margin-right: 180px;
+}
+
+#current-weather p {
+    font-size: 16px;
+}
+
+div.city {
+    background-color: rgb(236, 235, 235);
+    padding: 20px;
+    border-radius: 25px;
 }
 
 #five-day-forecast {
     visibility: hidden;
+}
+
+.card {
+    background-color: rgb(50, 104, 252);
+    color: white;
+    border-radius: 25px;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+p {
+    font-size: 13px;
 }

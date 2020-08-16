@@ -71,7 +71,7 @@ function displayCityWeather() {
              var col = $("<div class='col-sm-2'>")
              var card = $("<div class='card'>")
              var cardBody = $("<div class='card-body'>")
-             var date = moment(fiveDay[i].dt, "X").format(" (MM/DD/YYYY) ")
+             var date = moment(fiveDay[i].dt, "X").format(" M/DD/YYYY ")
              var h5 = $("<h5 class='card-title'>").text(date)
              var icon = fiveDay[i].weather[0].icon;
              var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
