@@ -1,10 +1,14 @@
+// cities array
 var cities = [];
 
 function displayCityWeather() {
 
+    // city search input
     var city = $("#find-city").val();
+    // API call for current weather data
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=40bb3520956324a1bb57bdbfcf243b0f";
 
+    // ajax call for city name, weather icon, current date, temperature(fahrenheit), humidity, & wind speed responses
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -39,8 +43,10 @@ function displayCityWeather() {
 
         var p3 = $("<p>").text("Wind Speed: " + wind + " MPH");
 
+        // api call for uv index *used latitude & longitude*
         var uvQueryUrl = "http://api.openweathermap.org/data/2.5/uvi?appid=40bb3520956324a1bb57bdbfcf243b0f&lat=" + response.coord.lat + "&lon=" + response.coord.lon
 
+        // nested ajax function for uv index response
         $.ajax({
             url: uvQueryUrl,
             method: "GET"
@@ -51,11 +57,12 @@ function displayCityWeather() {
 
             $("#current-weather").append(cityView);
         })    
-
     })
 
+    // api call for 5 day forecast
     var fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=40bb3520956324a1bb57bdbfcf243b0f"
 
+    // ajax function for 5 day forecast
     $.ajax({
         url: fiveDayUrl,
         method: "GET"
@@ -93,9 +100,11 @@ function displayCityWeather() {
         }
 
         $("#five-day-forecast").css("visibility", "visible");
+
     })
 }
 
+// city search buttons are created
 function addButtons() {
 
     $("#city-buttons").empty();
@@ -112,10 +121,11 @@ function addButtons() {
 
         $("#city-buttons").append(cityBtn);
 
-        localStorage.setItem(cities, JSON.stringify(cityBtn))
+        localStorage.setItem(cities, JSON.stringify(cities[i]))
     }
 }
 
+// onclick function for city search 
 $("#searchBtn").on("click", function(event) {
     event.preventDefault();
 
@@ -129,6 +139,6 @@ $("#searchBtn").on("click", function(event) {
 
 });
 
-$(document).on("click", ".city-btn", displayCityWeather);
-
 addButtons();
+
+$(document).on("click", ".city-btn", displayCityWeather);
