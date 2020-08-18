@@ -28,4 +28,4 @@ Tools Used:
 - moment.js, openweather.org api
 
 Screenshot: 
-<img src="assets/images/weather.png" alt="screenshot of app">
+<img src="assets/images/weather.png" alt="Screenshot of Weather App">
