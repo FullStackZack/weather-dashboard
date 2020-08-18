@@ -121,7 +121,7 @@ function addButtons() {
 
         $("#city-buttons").append(cityBtn);
 
-        localStorage.setItem(cities, JSON.stringify(cities[i]))
+        localStorage.setItem(cities, JSON.stringify(cityBtn))
     }
 }
 
