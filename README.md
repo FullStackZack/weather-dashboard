@@ -1,13 +1,13 @@
 # weather-dashboard
 
 User Story
-<hr>
+<br>
 AS A traveler<br>
 I WANT to see the weather outlook for multiple cities<br>
 SO THAT I can plan a trip accordingly<br>
--------------------------
+<br>
 Acceptance Criteria
-<hr>
+<br>
 GIVEN a weather dashboard with form inputs<br>
 WHEN I search for a city<br>
 THEN I am presented with current and future conditions for that city and that city is added to the search history<br>
@@ -21,8 +21,7 @@ WHEN I click on a city in the search history<br>
 THEN I am again presented with current and future conditions for that city<br>
 WHEN I open the weather dashboard<br>
 THEN I am presented with the last searched city forecast<br>
--------------------------
-
+<br>
 Tools Used:
 - HTML/CSS
 - JavaScript, jQuery, AJAX
