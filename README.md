@@ -1,5 +1,7 @@
 # weather-dashboard
 
+Link: https://fullstackzack.github.io/weather-dashboard/
+
 User Story
 <br>
 AS A traveler<br>
