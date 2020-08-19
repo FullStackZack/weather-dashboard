@@ -6,7 +6,7 @@ function displayCityWeather() {
     // city search input
     var city = $("#find-city").val();
     // API call for current weather data
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=40bb3520956324a1bb57bdbfcf243b0f";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=40bb3520956324a1bb57bdbfcf243b0f";
 
     // ajax call for city name, weather icon, current date, temperature(fahrenheit), humidity, & wind speed responses
     $.ajax({
@@ -24,7 +24,7 @@ function displayCityWeather() {
         var h2 = $("<h2>").text(name);
 
         var icon = response.weather[0].icon;
-        var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + icon + ".png";
 
         var img = $("<img>").attr("src", iconurl);
 
@@ -44,7 +44,7 @@ function displayCityWeather() {
         var p3 = $("<p>").text("Wind Speed: " + wind + " MPH");
 
         // api call for uv index *used latitude & longitude*
-        var uvQueryUrl = "http://api.openweathermap.org/data/2.5/uvi?appid=40bb3520956324a1bb57bdbfcf243b0f&lat=" + response.coord.lat + "&lon=" + response.coord.lon
+        var uvQueryUrl = "https://api.openweathermap.org/data/2.5/uvi?appid=40bb3520956324a1bb57bdbfcf243b0f&lat=" + response.coord.lat + "&lon=" + response.coord.lon
 
         // nested ajax function for uv index response
         $.ajax({
@@ -60,7 +60,7 @@ function displayCityWeather() {
     })
 
     // api call for 5 day forecast
-    var fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=40bb3520956324a1bb57bdbfcf243b0f"
+    var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=40bb3520956324a1bb57bdbfcf243b0f"
 
     // ajax function for 5 day forecast
     $.ajax({
@@ -81,7 +81,7 @@ function displayCityWeather() {
              var date = moment(fiveDay[i].dt, "X").format(" M/DD/YYYY ")
              var h5 = $("<h5 class='card-title'>").text(date)
              var icon = fiveDay[i].weather[0].icon;
-             var iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
+             var iconurl = "https://openweathermap.org/img/w/" + icon + ".png";
      
              var img = $("<img>").attr("src", iconurl)
              var temp = fiveDay[i].main.temp;
